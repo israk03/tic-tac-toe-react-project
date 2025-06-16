@@ -1,7 +1,9 @@
+import Board from "./components/board/Board";
+
 function App() {
   return (
     <>
-      <h1 className="text-6xl font-bold">Welcome to my tic tac toe game mf.</h1>
+      <Board />
     </>
   );
 }
