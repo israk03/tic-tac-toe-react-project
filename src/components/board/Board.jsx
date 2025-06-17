@@ -4,12 +4,18 @@ import Square from "./Square";
 export default function Board() {
   const [squares, setSquares] = useState(Array(9).fill(null));
   //   console.log(squares);
+  const handleClick = () => {
+    // console.log("square clicked");
+    const newSquares = squares.slice();
+    newSquares[0] = "X"; // For demonstration, we set the first square to "X"
+    setSquares(newSquares);
+  };
   return (
     <>
       <h1 className="text-3xl mb-3">Winner: </h1>
       <div className="flex">
         <div>
-          <Square value={squares[0]} />
+          <Square value={squares[0]} handleSquareClick={handleClick} />
           <Square value={squares[1]} />
           <Square value={squares[2]} />
         </div>
